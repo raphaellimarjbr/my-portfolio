@@ -24,6 +24,7 @@ a {
 h1 {
     font-size:4em;
     font-weight:700;
+    text-align:center;
 }
 
 p, button {
@@ -92,6 +93,10 @@ h3, i {
     flex-wrap:wrap;
 }
 
+#header, #main {
+    width:80vw;
+}
+
 body {
     display:grid;
     background:var(--background2);
@@ -104,6 +109,7 @@ body {
 
 #header {
     grid-area:header;
+    justify-self:center;
 }
 
 #main {
