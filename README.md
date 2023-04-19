@@ -1,6 +1,10 @@
 # Meu Portfólio
 
-[](/img/portfolio.png)
+[Tecnologias](#tecnologias)
+
+[Projeto](#projeto)
+
+![](/img/portfolio.png)
 
 ## Tecnologias
 
@@ -10,4 +14,4 @@
 
 ## Projeto
 
-[Acesse](https://raphaellimarjbr.github.io/my-portfolio/)
+[Acesse](https://raphaellimarjbr.github.io/my-portfolio/){:target="_blank"}
