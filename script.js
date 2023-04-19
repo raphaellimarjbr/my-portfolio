@@ -1,148 +1,259 @@
-const projects = [
-    [
-        "img/node.webp",
-        "Api Rest",
-        "Meu primeiro projeto feito em Node Js e Mongo Db",
+const nameWebsite = "Raphael Lima";
+
+document.title = nameWebsite;
+
+//  Title
+
+    const divTitle = document.querySelector(".title");
+
+    const h1Title = document.createElement("h1");
+
+    divTitle.appendChild(h1Title);
+
+    h1Title.innerText = nameWebsite;
+
+//  Menu
+
+    const menu = [
         [
-            "Node Js",
-            "Mongo Db"
+            "Meus Projetos",
+            "#"
         ],
         [
+            "Fale Comigo",
+            "#"
+        ],
+        [
+            "Sobre Mim",
+            "#"
+        ]
+    ];
+
+    const navMenu = document.querySelector(".menu");
+
+    const ulMenu = document.createElement("ul");
+
+    navMenu.appendChild(ulMenu);
+
+    for (let i = 0; i < menu.length; i++) {
+
+        const liMenu = document.createElement("li");
+
+        ulMenu.appendChild(liMenu);
+
+        const aMenu = document.createElement("a");
+
+        liMenu.appendChild(aMenu);
+
+        aMenu.href = menu[i][1];
+
+        aMenu.innerText = menu[i][0];
+    }
+
+//  Social Medias
+
+    const socialMedias = [
+        [
+            "GitHub",
+            "https://github.com/raphaellimarjbr",
+            "fa fa-github"
+        ],
+        [
+            "LinkedIn",
+            "https://www.linkedin.com/in/raphaellimarjbr/",
+            "fa fa-linkedin"
+        ]
+    ]
+
+    const navSocialMedias = document.querySelector(".socialMedias");
+
+    const ulSocialMedias = document.createElement("ul");
+
+    navSocialMedias.appendChild(ulSocialMedias);
+
+    for (let i = 0; i < socialMedias.length; i++) {
+
+        const liSocialMedias = document.createElement("li");
+
+        ulSocialMedias.appendChild(liSocialMedias);
+
+        const aSocialMedias = document.createElement("a");
+
+        liSocialMedias.appendChild(aSocialMedias);
+
+        aSocialMedias.href = socialMedias[i][1];
+
+        aSocialMedias.target = "_blank";
+
+        aSocialMedias.title = socialMedias[i][0];
+
+        const iSocialMedias = document.createElement("i");
+
+        aSocialMedias.appendChild(iSocialMedias);
+
+        iSocialMedias.className = socialMedias[i][2];
+
+    }
+
+//  Projects
+
+    const projects = [
+        [
+            "img/node.webp",
+            "Api Rest",
+            "Meu primeiro projeto feito em Node Js e Mongo Db",
             [
-                "Repositório",
-                "https://github.com/raphaellimarjbr/first-project-nodeJS-mongoDb-apiRestFul"                
+                "Node Js",
+                "Mongo Db"
             ],
             [
-                "Acessar",
-                "https://github.com/raphaellimarjbr/first-project-nodeJS-mongoDb-apiRestFul"
+                [
+                    "Repositório",
+                    "https://github.com/raphaellimarjbr/first-project-nodeJS-mongoDb-apiRestFul"                
+                ],
+                [
+                    "Acessar",
+                    "https://github.com/raphaellimarjbr/first-project-nodeJS-mongoDb-apiRestFul"
+                ]
             ]
-        ]
-    ],
-    [
-        "img/preto.webp",
-        "Pibce",
-        "Projeto ainda em desenvolvimento...",
-        [
-            "Php",
-            "Mysql"
         ],
         [
+            "img/preto.webp",
+            "Pibce",
+            "Projeto ainda em desenvolvimento...",
             [
-                "Repositório",
-                "https://github.com/raphaellimarjbr/pibce"                
+                "Php",
+                "Mysql"
+            ],
+            [
+                [
+                    "Repositório",
+                    "https://github.com/raphaellimarjbr/pibce"                
+                ]
             ]
         ]
     ]
-]
 
-const projectsId = document.querySelector("#projects");
+    projects.reverse();
 
-for (let i = 0; i < projects.length; i++) {
+    const projectsId = document.querySelector("#projects");
 
-    //  Project Article
+    for (let i = 0; i < projects.length; i++) {
 
-        const projectArticle = document.createElement("article");
-        projectArticle.className = "project";
+        //  Project Article
 
-    //  Project Thumbnail
+            const projectArticle = document.createElement("article");
+            projectArticle.className = "project";
 
-        const projectThumbnail = document.createElement("div");
-        projectThumbnail.className = "projectThumbnail";
+        //  Project Thumbnail
 
-        //  Img Project Thumbnail
+            const projectThumbnail = document.createElement("div");
+            projectThumbnail.className = "projectThumbnail";
 
-            const imgProjectThumbnail = document.createElement("img");
-            imgProjectThumbnail.src = projects[i][0];
+            //  Img Project Thumbnail
 
-    //  Project Content
+                const imgProjectThumbnail = document.createElement("img");
+                imgProjectThumbnail.src = projects[i][0];
 
-        const projectContent = document.createElement("div");
-        projectContent.className = "projectContent";
+        //  Project Content
 
-        //  Project Title
+            const projectContent = document.createElement("div");
+            projectContent.className = "projectContent";
 
-            const projectTitle = document.createElement("div");
-            projectTitle.className = "projectTitle";
+            //  Project Title
 
-            //  H3 Project Title
+                const projectTitle = document.createElement("div");
+                projectTitle.className = "projectTitle";
 
-                const h3ProjectTitle = document.createElement("h3");
-                h3ProjectTitle.innerText = projects[i][1];
+                //  H3 Project Title
 
-        //  Project Description
+                    const h3ProjectTitle = document.createElement("h3");
+                    h3ProjectTitle.innerText = projects[i][1];
 
-            const projectDescription = document.createElement("div");
-            projectDescription.className = "projectDescription";
+            //  Project Description
 
-            //  P Project Description
+                const projectDescription = document.createElement("div");
+                projectDescription.className = "projectDescription";
 
-                const pProjectDescription = document.createElement("p");
-                pProjectDescription.innerText = projects[i][2];
+                //  P Project Description
+
+                    const pProjectDescription = document.createElement("p");
+                    pProjectDescription.innerText = projects[i][2];
 
 
-        //  Project Technologies
+            //  Project Technologies
 
-            const projectTechnologies = document.createElement("div");
-            projectTechnologies.className = "projectTechnologies";
+                const projectTechnologies = document.createElement("div");
+                projectTechnologies.className = "projectTechnologies";
 
-            //  Ul Project Technologies
+                //  Ul Project Technologies
 
-                const uLProjectTechnologies = document.createElement("ul");
+                    const uLProjectTechnologies = document.createElement("ul");
 
-                //  Li Project Technologies
+                    //  Li Project Technologies
 
-                    for (let j = 0; j < projects[i][3].length; j++) {
-                        const lIProjectTechnologies = document.createElement("li");
+                        for (let j = 0; j < projects[i][3].length; j++) {
+                            const lIProjectTechnologies = document.createElement("li");
 
-                        uLProjectTechnologies.appendChild(lIProjectTechnologies);
+                            uLProjectTechnologies.appendChild(lIProjectTechnologies);
 
-                        lIProjectTechnologies.innerText = projects[i][3][j];
+                            lIProjectTechnologies.innerText = projects[i][3][j];
+                        }
+
+            //  Project Buttons
+
+                const projectButtons = document.createElement("div");
+                projectButtons.className = "projectButtons";
+
+                //  Button Project Buttons
+
+                    for (let k = 0; k < projects[i][4].length; k++) {
+
+                        //  Button Project Buttons
+
+                            const buttonProjectButtons = document.createElement("button");
+                            projectButtons.appendChild(buttonProjectButtons);
+
+                            //  A Button Project Buttons
+
+                                const aProjectButtons = document.createElement("a");
+                                buttonProjectButtons.appendChild(aProjectButtons);
+                                aProjectButtons.href = projects[i][4][k][1];
+                                aProjectButtons.target = "_blank";
+                                aProjectButtons.innerText = projects[i][4][k][0];
+
                     }
 
-        //  Project Buttons
 
-            const projectButtons = document.createElement("div");
-            projectButtons.className = "projectButtons";
+        projectsId.appendChild(projectArticle);
 
-            //  Button Project Buttons
+        projectArticle.appendChild(projectThumbnail);
 
-                for (let k = 0; k < projects[i][4].length; k++) {
+        projectThumbnail.appendChild(imgProjectThumbnail);
 
-                    //  Button Project Buttons
+        projectArticle.appendChild(projectContent);
 
-                        const buttonProjectButtons = document.createElement("button");
-                        projectButtons.appendChild(buttonProjectButtons);
+        projectContent.appendChild(projectTitle);
 
-                        //  A Button Project Buttons
+        projectTitle.appendChild(h3ProjectTitle);
 
-                            const aProjectButtons = document.createElement("a");
-                            buttonProjectButtons.appendChild(aProjectButtons);
-                            aProjectButtons.href = projects[i][4][k][1];
-                            aProjectButtons.target = "_blank";
-                            aProjectButtons.innerText = projects[i][4][k][0];
+        projectContent.appendChild(projectDescription);
+        
+        projectDescription.appendChild(pProjectDescription);
 
-                }
+        projectContent.appendChild(projectTechnologies);
 
+        projectTechnologies.appendChild(uLProjectTechnologies);
+        
+        projectContent.appendChild(projectButtons);
+    }
 
-    projectsId.appendChild(projectArticle);
+//  Footer
 
-    projectArticle.appendChild(projectThumbnail);
+    const footer = document.querySelector("#footer");
 
-    projectThumbnail.appendChild(imgProjectThumbnail);
+    const pFooter = document.createElement("p");
 
-    projectArticle.appendChild(projectContent);
+    footer.appendChild(pFooter);
 
-    projectContent.appendChild(projectTitle);
-
-    projectTitle.appendChild(h3ProjectTitle);
-
-    projectContent.appendChild(projectDescription);
-    
-    projectDescription.appendChild(pProjectDescription);
-
-    projectContent.appendChild(projectTechnologies);
-
-    projectTechnologies.appendChild(uLProjectTechnologies);
-    
-    projectContent.appendChild(projectButtons);
-}
+    pFooter.innerHTML = `&copy; ${nameWebsite}`;
