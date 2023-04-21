@@ -14,4 +14,4 @@
 
 ## Projeto
 
-[Acesse](https://raphaellimarjbr.github.io/my-portfolio/){:target="_blank"}
+[Acesse](https://raphaellimarjbr.github.io/my-portfolio/){:target="\_blank"}
