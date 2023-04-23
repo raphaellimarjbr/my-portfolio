@@ -160,6 +160,14 @@ button {
   height: 60vh;
   align-items: center;
   gap: 10vh;
+  animation: up 500ms backwards var(--delay);
+}
+
+@keyframes up {
+  from {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
 }
 
 .project:nth-child(2n) {
