@@ -19,7 +19,8 @@ function theme() {
 
   themeButton.addEventListener("click", function () {
     if (themeButtonSpan.textContent == "Dark") {
-      localStorageThemeSet("Ligth", "sun", "dark");
+      body.style.transition = "background 300ms";
+      localStorageThemeSet("Light", "sun", "dark");
     } else {
       localStorageThemeSet("Dark", "moon", "");
     }
