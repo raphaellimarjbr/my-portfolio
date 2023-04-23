@@ -32,15 +32,15 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.5em, 3vw, 3em);
+  font-size: clamp(2.5em, 3em, 3em);
 }
 
 h2 {
-  font-size: clamp(1.8em, 2vw, 2em);
+  font-size: clamp(1.8em, 2em, 2em);
 }
 
 h3 {
-  font-size: clamp(1.5em, 1.5vw, 1.5em);
+  font-size: clamp(1.5em, 1.5em, 1.5em);
 }
 
 p,
@@ -58,6 +58,7 @@ a,
 li,
 p {
   color: var(--color);
+  word-break: keep-all;
 }
 
 a {
@@ -310,6 +311,9 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .main {
+    width: 85vw;
+  }
   #header .main nav:nth-child(2) {
     display: block;
   }
@@ -322,16 +326,32 @@ button {
   .project header {
     height: 50vh;
   }
-  .project,
-  #footer .main {
+  .project {
     display: flex;
+  }
+  #footer .main,
+  .project,
+  .projectButtons,
+  #footer .main ul li {
     flex-flow: column;
   }
   .projectTecnologies li img {
     height: 70px;
     width: 70px;
   }
+  .projectButtons,
+  .projectTecnologies {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   #footer .main {
     gap: 5vh;
+  }
+  #footer ul li {
+    word-break: break-all;
+  }
+  #footer ul li div {
+    align-self: flex-start;
   }
 }
