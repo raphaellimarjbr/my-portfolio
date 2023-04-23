@@ -4,23 +4,145 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Raphael Lima</title>
+    <link rel="shortcut icon" href="/img/svg/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/dc0824ecd1.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header id="header">
-      <div class="title"></div>
-      <nav class="menu"></nav>
-      <nav class="socialMedias"></nav>
+      <div class="main">
+        <div class="title">
+          <h1>RL</h1>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#sobre-mim">Sobre Mim</a></li>
+            <li><a href="#meus-projetos">Meus Projetos</a></li>
+            <li><a href="#fale-comigo">Fale Comigo</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul class="socialMedias">
+            <li>
+              <a href="https://github.com/raphaellimarjbr" target="_blank">
+                <i class="fa fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/raphaellimarjbr/"
+                target="_blank">
+                <i class="fa fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <button class="theme">
+            <i class="fa fa-moon"></i>
+            <span>Dark</span>
+          </button>
+        </nav>
+      </div>
     </header>
     <main id="main">
-      <section id="projects"></section>
+      <div class="main">
+        <header id="meus-projetos">
+          <h2>Meus Projetos</h2>
+        </header>
+        <section id="projects">
+          <article class="project">
+            <header>
+              <img src="/img/node.webp" alt="Api Rest" />
+            </header>
+            <footer>
+              <h3>Api Rest</h3>
+              <p>
+                Projeto desenvolvido por mim tanto Front-end quanto Back-end,
+                utilizei meus conhecimentos sobre Node JS e Mongo DB.
+              </p>
+              <ul class="projectTecnologies">
+                <li><strong>Node JS</strong></li>
+                <li><strong>MongoDB</strong></li>
+              </ul>
+              <div class="projectButtons">
+                <button class="projectButton">
+                  <a
+                    href="https://github.com/raphaellimarjbr/apiRestFul-nodeJs-mongoDb"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                    <span>Repositório</span>
+                  </a>
+                </button>
+                <button class="projectButton">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-globe"></i>
+                    <span>Acessar</span>
+                  </a>
+                </button>
+              </div>
+            </footer>
+          </article>
+          <article class="project">
+            <header><h1>Em Breve</h1></header>
+            <footer>
+              <h3>Pibce</h3>
+              <p>
+                Projeto de uma igreja bem conhecida aqui onde mora, além de ser
+                membro dela. fiz esse website do front-end até o backend,
+                utilizando o php para fazer a parte do backend e html5, css3,
+                js.
+              </p>
+              <ul class="projectTecnologies">
+                <li><strong>Php</strong></li>
+                <li><strong>MySQL</strong></li>
+              </ul>
+              <div class="projectButtons">
+                <button class="projectButton">
+                  <a
+                    href="https://github.com/raphaellimarjbr/pibce"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                    <span>Repositório</span>
+                  </a>
+                </button>
+                <button class="projectButton">
+                  <a href="#" target="_blank">
+                    <i class="fa fa-globe"></i>
+                    <span>Acessar</span>
+                  </a>
+                </button>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="main">
+        <ul>
+          <li>
+            <i class="fa fa-at"></i>
+            <span>Email: raphaellimaofficialrjbr@gmail.com</span>
+          </li>
+          <li>
+            <i class="fa fa-code"></i>
+            <span>Desenvolvido por: Raphael Lima</span>
+          </li>
+        </ul>
+        <button>
+          <a href="#meus-projetos">
+            <span>Voltar</span>
+            <i class="fa fa-chevron-up"></i>
+          </a>
+        </button>
+      </div>
+    </footer>
   </body>
 </html>
