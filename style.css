@@ -32,15 +32,15 @@ body {
 }
 
 h1 {
-  font-size: clamp(2em, 3vw, 3em);
+  font-size: clamp(2.5em, 3vw, 3em);
 }
 
 h2 {
-  font-size: clamp(1.5em, 2vw, 2em);
+  font-size: clamp(1.8em, 2vw, 2em);
 }
 
 h3 {
-  font-size: clamp(1.3em, 1.5vw, 1.5em);
+  font-size: clamp(1.5em, 1.5vw, 1.5em);
 }
 
 p,
@@ -48,7 +48,7 @@ li,
 button,
 i,
 a {
-  font-size: clamp(1em, 1.3vw, 1.3em);
+  font-size: clamp(1.2em, 1.3vw, 1.3em);
 }
 
 h1,
@@ -83,6 +83,10 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 10vh;
+}
+
+#header .main nav:nth-child(2) {
+  display: none;
 }
 
 .menu li,
@@ -127,7 +131,9 @@ button {
   gap: 3vh;
 }
 
-.theme {
+.buttonPrimary {
+  display: flex;
+  align-items: center;
   gap: 10px;
   border: none;
   padding: 10px 20px;
@@ -301,4 +307,31 @@ button {
   gap: 10px;
   color: var(--body);
   padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #header .main nav:nth-child(2) {
+    display: block;
+  }
+  #header .main nav:nth-child(n + 3) {
+    display: none;
+  }
+  .project {
+    height: auto;
+  }
+  .project header {
+    height: 50vh;
+  }
+  .project,
+  #footer .main {
+    display: flex;
+    flex-flow: column;
+  }
+  .projectTecnologies li img {
+    height: 70px;
+    width: 70px;
+  }
+  #footer .main {
+    gap: 5vh;
+  }
 }
