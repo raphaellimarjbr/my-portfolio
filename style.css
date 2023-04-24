@@ -90,8 +90,7 @@ button {
   display: none;
 }
 
-.menu li,
-.socialMedias li {
+.menuNav li {
   position: relative;
 }
 
@@ -116,15 +115,13 @@ button {
   z-index: 1;
 }
 
-.menu,
-.socialMedias {
+.menuNav {
   display: flex;
   flex-flow: wrap;
   gap: 5vh;
   align-items: center;
 }
 
-.socialMedias li a,
 #footer li,
 .theme {
   display: flex;
@@ -185,10 +182,10 @@ button {
   width: 100%;
   height: 100%;
   position: relative;
-  background: var(--color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url("/img/svg/image.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .project header img {
@@ -314,10 +311,19 @@ button {
   .main {
     width: 85vw;
   }
+  .menu {
+    display: none;
+    top: 50vh;
+    left: 50%;
+    position: absolute;
+    background: var(--body);
+    padding: 5vh;
+    transform: translateX(-50%) translateY(-50%);
+  }
   #header .main nav:nth-child(2) {
     display: block;
   }
-  #header .main nav:nth-child(n + 3) {
+  #header .main nav:nth-child(4) {
     display: none;
   }
   .project header {

@@ -31,3 +31,21 @@ function theme() {
 }
 
 theme();
+
+function menu() {
+  const menuButton = document.querySelector(".iconMenu");
+  const menuButtonSpan = document.querySelector(".iconMenu span");
+  const menu = document.querySelector(".menu");
+
+  menuButton.addEventListener("click", function () {
+    if (menuButtonSpan.textContent == "Menu") {
+      menuButtonSpan.textContent = "Fechar";
+      menu.style.display = "block";
+    } else {
+      menuButtonSpan.textContent = "Menu";
+      menu.style.display = "none";
+    }
+  });
+}
+
+menu();
