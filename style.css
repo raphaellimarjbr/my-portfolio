@@ -164,7 +164,6 @@ button {
   display: grid;
   grid-template-areas: "header footer";
   grid-template-columns: 1fr 1fr;
-  height: 60vh;
   align-items: center;
   gap: 10vh;
   animation: up 500ms backwards var(--delay);
@@ -209,6 +208,7 @@ button {
   flex-flow: column;
   align-items: flex-start;
   gap: 5vh;
+  margin: 10vh 0;
 }
 
 .projectTecnologies {
@@ -320,14 +320,14 @@ button {
   #header .main nav:nth-child(n + 3) {
     display: none;
   }
-  .project {
-    height: auto;
-  }
   .project header {
     height: 50vh;
   }
   .project {
     display: flex;
+  }
+  .project footer {
+    margin: 0;
   }
   #footer .main,
   .project,
