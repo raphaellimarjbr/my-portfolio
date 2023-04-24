@@ -317,8 +317,12 @@ button {
     left: 50%;
     position: absolute;
     background: var(--body);
-    padding: 5vh;
     transform: translateX(-50%) translateY(-50%);
+  }
+  .menuNav {
+    flex-flow: column;
+    gap: 3vh;
+    padding: 10vh;
   }
   #header .main nav:nth-child(2) {
     display: block;
